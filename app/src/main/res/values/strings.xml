@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">YogyakartaApp</string>
+
+    <string name="place_name">Nama Tempat</string>
+    <string name="description">Deskripsi Tempat</string>
+
+    <string-array name="data_name">
+        <item>Malioboro</item>
+        <item>Candi Prambanan</item>
+        <item>Pantai Parangtritis</item>
+        <item>Tebing Breksi</item>
+        <item>Pantai Ngobaran</item>
+        <item>Gembira Loka</item>
+        <item>Pantai Indrayanti</item>
+        <item>HeHa Sky View</item>
+        <item>Obelix Sea View</item>
+    </string-array>
+
+    <string-array name="data_description">
+        <item>Malioboro adalah jantung Kota Jogja. Tak heran bila banyak penginapan murah dekat Malioboro, meskipun sekarang banyak hotel berbintang</item>
+        <item>Candi Prambanan dibangun pada abad ke-9. Menjulang setinggi 47 meter dengan ornamen yang mengagumkan, kecantikan candi Hindu ini tak tertandingi. Candi Prambanan terletak 17 km ke arah timur dari pusat Kota Jogja dan bisa dijangkau dengan bus Trans Jogja</item>
+        <item>Pantai Parangtritis hanya 27 km dari pusat Kota Jogja dan terkenal memiliki pemandangan sunset yang romantis. Naik bendi menyusuri Pantai Parangtritis sore hari akan menjadi kenangan yang manis.</item>
+        <item>Kehilangan fungsi sebagai tempat menambang batuan kapur, membuat kawasan Tebing Breksi di Sambirejo, Prambanan, malah ramai didatangi pengunjung segala umur.</item>
+        <item>Pantai Ngobaran ternyata kaya pesona budaya; mulai dari pura, masjid yang menghadap ke selatan, hingga potensi kuliner terpendam yaitu landak laut goreng.</item>
+        <item>Gembira Loka merupakan tempat yang tepat untuk berwisata bersama keluarga. Tak hanya bisa mencoba berbagai wahana permainan dan menyaksikan tingkah aneka satwa, di Gembira Loka Anda juga bisa menemukan kadal raksasa, Komodo Dragon.</item>
+        <item>Selain menawarkan pesona pantai berpasir putih dengan air laut yang jernih, Indrayanti juga menawarkan sensasi dinner romantis bertabur bintang di restoran yang terletak di tepi pantai.</item>
+        <item>HeHa Sky View sangat populer dan bisa dijangkau dalam 30 menit saja dari Kota Jogja. HeHa Sky View berisi tempat selfie, food stall, dan resto. Tempatnya sangat instagramable, banyak spot foto keren dengan pemandangan langit dan Kota Jogja dari ketinggian.</item>
+        <item>Obelix Sea View mudah dijangkau dari Kota Jogja karena hanya terletak di timur Pantai Parangtritis. Ini adalah tempat terbaik untuk merayakan sunset di Jogja.</item>
+    </string-array>
+
+    <string-array name="data_photo">
+        <item>https://upload.wikimedia.org/wikipedia/commons/f/f0/Malioboro_Street%2C_Yogyakarta.JPG</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/7/72/Prambanan_temple%2C_Central_Java%2C_Indonesia%2C_20220818_1311_9139.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/9/99/Pantai_parangtritis_%283%29.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/1/1f/Sunsat.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/3/38/Pantai_Ngobaran_%281%29.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/a/ae/The_Magnificent_Peafowl.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/8/83/Pantai_Indrayanti.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/0/0c/HeHa_Sky_View-54.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/7/71/Obelix_Sea_View.jpg</item>
+    </string-array>
+
+</resources>
