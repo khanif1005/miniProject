@@ -127,63 +127,71 @@
             android:text="Gambar Lainnya"
             android:textSize="25sp"
             android:textStyle="bold"
-            card_view:layout_constraintTop_toBottomOf="@+id/img_item_photo"
-            card_view:layout_constraintStart_toStartOf="parent" />
-
-        <ImageView
-            android:id="@+id/img_item_photo1"
-            android:layout_width="117dp"
-            android:layout_height="104dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
-            android:scaleType="centerCrop"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/text_gambar"
-            tools:src="@tools:sample/avatars" />
+            card_view:layout_constraintTop_toBottomOf="@+id/img_item_photo" />
 
-        <ImageView
-            android:id="@+id/img_item_photo2"
-            android:layout_width="117dp"
-            android:layout_height="104dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
-            android:scaleType="centerCrop"
-            card_view:layout_constraintStart_toEndOf="@+id/img_item_photo1"
-            card_view:layout_constraintTop_toBottomOf="@+id/text_gambar"
-            tools:src="@tools:sample/avatars" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/img_item_photo1"-->
+        <!--            android:layout_width="117dp"-->
+        <!--            android:layout_height="104dp"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:scaleType="centerCrop"-->
+        <!--            card_view:layout_constraintStart_toStartOf="parent"-->
+        <!--            card_view:layout_constraintTop_toBottomOf="@+id/text_gambar"-->
+        <!--            tools:src="@tools:sample/avatars" />-->
 
-        <ImageView
-            android:id="@+id/img_item_photo3"
-            android:layout_width="117dp"
-            android:layout_height="104dp"
-            android:layout_marginStart="160dp"
-            android:layout_marginTop="8dp"
-            android:scaleType="centerCrop"
-            card_view:layout_constraintStart_toEndOf="@+id/img_item_photo1"
-            card_view:layout_constraintTop_toBottomOf="@+id/text_gambar"
-            tools:src="@tools:sample/avatars" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/img_item_photo2"-->
+        <!--            android:layout_width="117dp"-->
+        <!--            android:layout_height="104dp"-->
+        <!--            android:layout_marginStart="24dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:scaleType="centerCrop"-->
+        <!--            card_view:layout_constraintStart_toEndOf="@+id/img_item_photo1"-->
+        <!--            card_view:layout_constraintTop_toBottomOf="@+id/text_gambar"-->
+        <!--            tools:src="@tools:sample/avatars" />-->
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/img_item_photo3"-->
+        <!--            android:layout_width="117dp"-->
+        <!--            android:layout_height="104dp"-->
+        <!--            android:layout_marginStart="160dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:scaleType="centerCrop"-->
+        <!--            card_view:layout_constraintStart_toEndOf="@+id/img_item_photo1"-->
+        <!--            card_view:layout_constraintTop_toBottomOf="@+id/text_gambar"-->
+        <!--            tools:src="@tools:sample/avatars" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list_poto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/text_gambar">
+
+        </androidx.recyclerview.widget.RecyclerView>
 
         <TextView
             android:id="@+id/text_deskripsi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="Deskripsi"
             android:textSize="25sp"
             android:textStyle="bold"
-            card_view:layout_constraintTop_toBottomOf="@+id/img_item_photo1"
             card_view:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="16dp" />
+            card_view:layout_constraintTop_toBottomOf="@+id/rv_list_poto" />
 
         <TextView
             android:id="@+id/isi_text_deskripsi"
             android:layout_width="363dp"
-            android:layout_height="224dp"
+            android:layout_height="150dp"
+
             android:text="Isi konten deskripsi"
             android:textSize="20sp"
-            card_view:layout_constraintTop_toBottomOf="@+id/text_deskripsi"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp" />
+            card_view:layout_constraintTop_toBottomOf="@+id/text_deskripsi" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
