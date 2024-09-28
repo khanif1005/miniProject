@@ -1,11 +1,13 @@
-package com.latihan.yogyakartaapp
+package com.latihan.yogyakartaapp.ui
 
 import android.os.Bundle
 import android.view.Menu
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.latihan.yogyakartaapp.R
+import com.latihan.yogyakartaapp.adapter.ListTourAdapter
+import com.latihan.yogyakartaapp.data.Wisata
 
 class MainActivity : AppCompatActivity() {
     private lateinit var rvTour: RecyclerView
@@ -45,8 +47,6 @@ class MainActivity : AppCompatActivity() {
         rvTour.layoutManager = LinearLayoutManager(this)
         val listTourAdapter = ListTourAdapter(list)
         rvTour.adapter = listTourAdapter
-
-
     }
 
 }

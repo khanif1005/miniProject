@@ -1,14 +1,14 @@
-package com.latihan.yogyakartaapp
+package com.latihan.yogyakartaapp.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
-import androidx.recyclerview.widget.AdapterListUpdateCallback
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.latihan.yogyakartaapp.R
+import com.latihan.yogyakartaapp.data.Wisata
 
 class ListTourAdapter(private val listTour: ArrayList<Wisata>) : RecyclerView.Adapter<ListTourAdapter.listViewHolder>(){
     private lateinit var onItemClikCallback: OnItemClickCallback
