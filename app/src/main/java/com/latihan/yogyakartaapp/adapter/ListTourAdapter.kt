@@ -10,18 +10,17 @@ import com.bumptech.glide.Glide
 import com.latihan.yogyakartaapp.R
 import com.latihan.yogyakartaapp.data.Wisata
 
-class ListTourAdapter(private val listTour: ArrayList<Wisata>) : RecyclerView.Adapter<ListTourAdapter.listViewHolder>(){
-    private lateinit var onItemClikCallback: OnItemClickCallback
-
-    fun setOnItemCallback(onitemCallback: OnItemClickCallback){
-        this.onItemClikCallback = onitemCallback
-    }
+class ListTourAdapter(
+    private val listTour: ArrayList<Wisata>,
+    private val onItemClickCallback: OnItemClickCallback    //set onItemClick pada constructor
+) : RecyclerView.Adapter<ListTourAdapter.listViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): listViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_row_tour, parent, false)
+        val view: View =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_row_tour, parent, false)
         return listViewHolder(view)
     }
 
@@ -35,6 +34,7 @@ class ListTourAdapter(private val listTour: ArrayList<Wisata>) : RecyclerView.Ad
         holder.tvName.text = name
         holder.tvDescription.text = description
         holder.itemView.setOnClickListener {
+            onItemClickCallback.onItemClicked(position)
         }
     }
 
@@ -47,6 +47,6 @@ class ListTourAdapter(private val listTour: ArrayList<Wisata>) : RecyclerView.Ad
     }
 
     interface OnItemClickCallback {
-        fun onItemClicked(data: Wisata)
+        fun onItemClicked(position: Int)
     }
 }

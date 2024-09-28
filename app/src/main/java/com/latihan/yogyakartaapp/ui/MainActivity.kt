@@ -2,6 +2,7 @@ package com.latihan.yogyakartaapp.ui
 
 import android.os.Bundle
 import android.view.Menu
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -9,7 +10,7 @@ import com.latihan.yogyakartaapp.R
 import com.latihan.yogyakartaapp.adapter.ListTourAdapter
 import com.latihan.yogyakartaapp.data.Wisata
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), ListTourAdapter.OnItemClickCallback {   // implement interface dari adapter (nanti click Alt + Enter)
     private lateinit var rvTour: RecyclerView
     private val list = ArrayList<Wisata>()
 
@@ -45,8 +46,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun showRecyclerList() {
         rvTour.layoutManager = LinearLayoutManager(this)
-        val listTourAdapter = ListTourAdapter(list)
+        val listTourAdapter = ListTourAdapter(list, this@MainActivity)  // panggil interface dari adapter
         rvTour.adapter = listTourAdapter
+    }
+
+    override fun onItemClicked(position: Int) {
+        Toast.makeText(this, "Masuk $position", Toast.LENGTH_SHORT).show()  // test apakah onclick item nya berfungsi
     }
 
 }
