@@ -1,5 +1,6 @@
 package com.latihan.yogyakartaapp.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.widget.Toast
@@ -9,10 +10,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.latihan.yogyakartaapp.R
 import com.latihan.yogyakartaapp.adapter.ListTourAdapter
 import com.latihan.yogyakartaapp.data.Wisata
+import com.latihan.yogyakartaapp.utils.Constants
 
-class MainActivity : AppCompatActivity(), ListTourAdapter.OnItemClickCallback {   // implement interface dari adapter (nanti click Alt + Enter)
+// implement interface dari adapter (nanti click Alt + Enter)
+class MainActivity : AppCompatActivity(), ListTourAdapter.OnItemClickCallback {
     private lateinit var rvTour: RecyclerView
     private val list = ArrayList<Wisata>()
+    private lateinit var listTourAdapter: ListTourAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,12 +50,24 @@ class MainActivity : AppCompatActivity(), ListTourAdapter.OnItemClickCallback { 
 
     private fun showRecyclerList() {
         rvTour.layoutManager = LinearLayoutManager(this)
-        val listTourAdapter = ListTourAdapter(list, this@MainActivity)  // panggil interface dari adapter
+
+        // panggil interface dari adapter (this@MainActivity) dan buat adapternya menjadi global variable
+        listTourAdapter = ListTourAdapter(list, this@MainActivity)
         rvTour.adapter = listTourAdapter
     }
 
     override fun onItemClicked(position: Int) {
-        Toast.makeText(this, "Masuk $position", Toast.LENGTH_SHORT).show()  // test apakah onclick item nya berfungsi
+        // test apakah onclick item nya berfungsi
+//        Toast.makeText(this, "Masuk $position", Toast.LENGTH_SHORT).show()
+
+        showSelectedTour(listTourAdapter.getItem(position))
     }
+
+    private fun showSelectedTour(rose: Wisata) {
+        val detailIntent = Intent(this@MainActivity, DetailActivity::class.java)
+        detailIntent.putExtra(Constants.TOUR_ITEM, rose)
+        startActivity(detailIntent)
+    }
+
 
 }
