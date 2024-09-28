@@ -21,9 +21,11 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // get data tour from intent
         val item: Wisata? = intent.parcelable(Constants.TOUR_ITEM)
         Log.d(TAG, "onCreate: ${item?.name}")
 
+        // set toolbar name and back button
         supportActionBar?.title = item?.name
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
@@ -31,6 +33,8 @@ class DetailActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+
+            //set fungsi back button pad toolbar
             android.R.id.home -> onBackPressedDispatcher.onBackPressed()
             else -> {}
         }
