@@ -40,6 +40,10 @@ class ListTourAdapter(
 
     override fun getItemCount(): Int = listTour.size
 
+    fun getItem(index: Int): Wisata {
+        return listTour[index]
+    }
+
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
         val tvName: TextView = itemView.findViewById(R.id.tv_item_name)
